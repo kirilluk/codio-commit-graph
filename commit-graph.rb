@@ -31,5 +31,7 @@ if ARGV.length != 2 then
   exit 1
 end
 
-git = open_git(ARGV[0])
-create_graph(git, ARGV[1])
+# TODO
+# Use the open_git and create_graph methods to create a commit log
+# ARGV[0] is the Git directory
+# ARGV[1] is the filename of the output image
