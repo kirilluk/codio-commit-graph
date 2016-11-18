@@ -8,9 +8,9 @@ def create_graph(git, filename)
   
   # For each commit, add a nodes and edges
   git.log.each do |commit|
-    child = g.add_nodes(commit.sha[0..6])
+    child = g.add_nodes(commit.sha[0..6], :style => "filled", :fillcolor => :lightblue)
     commit.parents.each do |parent|
-      parent_node = g.add_nodes(parent.sha[0..6])
+      parent_node = g.add_nodes(parent.sha[0..6], :style => "filled", :fillcolor => :lightblue)
 
       # Add edge from this parent to current node
       g.add_edges(parent_node, child)
