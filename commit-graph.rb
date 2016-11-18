@@ -13,7 +13,7 @@ def create_graph(git, filename)
       parent_node = g.add_nodes(parent.sha[0..6], :style => "filled", :fillcolor => :lightblue)
 
       # Add edge from this parent to current node
-      g.add_edges(parent_node, child)
+      g.add_edges(child, parent_node, :dir => "back")
     end
   end
   
