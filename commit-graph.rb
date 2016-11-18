@@ -1,9 +1,8 @@
 require 'git'
 require 'graphviz'
 
-
 def create_graph(git, filename)
-  # Create a new graph
+  # Create a new graph object
   g = GraphViz.new( :G, :type => :digraph )
   
   # For each commit, add a nodes and edges
